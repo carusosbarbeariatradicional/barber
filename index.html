@@ -9,7 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&family=Rye&family=Limelight&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -21,10 +21,9 @@
       <path d="M12 21s7-5.2 7-12a7 7 0 1 0-14 0c0 6.8 7 12 7 12Z"></path>
       <circle cx="12" cy="9" r="2.6"></circle>
     </symbol>
-    <symbol id="icon-whatsapp" viewBox="0 0 24 24">
-      <path d="M20.52 3.48A11.78 11.78 0 0 0 12.12 0C5.7 0 .48 5.22.48 11.64c0 2.05.54 4.06 1.56 5.83L0 24l6.69-1.76a11.6 11.6 0 0 0 5.43 1.38h.01c6.42 0 11.64-5.22 11.64-11.64 0-3.11-1.21-6.04-3.25-8.5Z"></path>
-      <path d="M12.14 21.38h-.01a9.37 9.37 0 0 1-4.77-1.31l-.34-.2-3.97 1.04 1.06-3.86-.22-.36a9.39 9.39 0 1 1 8.25 4.69Z"></path>
-      <path d="M8.96 7.22c-.21-.48-.44-.49-.64-.5h-.54c-.18 0-.47.07-.72.34-.25.27-.94.92-.94 2.24 0 1.32.97 2.6 1.1 2.78.13.18 1.9 2.9 4.6 4.06.64.28 1.15.44 1.54.56.65.2 1.24.17 1.7.1.52-.08 1.6-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31-.27-.13-1.6-.79-1.84-.88-.25-.09-.43-.13-.61.13-.18.27-.7.88-.85 1.06-.16.18-.31.2-.58.07-.27-.13-1.12-.41-2.13-1.31-.79-.7-1.32-1.57-1.47-1.84-.16-.27-.02-.42.12-.55.12-.12.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.04-.34-.02-.47-.07-.13-.6-1.47-.83-2Z"></path>
+    <symbol id="icon-whatsapp" viewBox="0 0 32 32">
+      <path fill="currentColor" d="M16.01 3.2c-6.97 0-12.62 5.65-12.62 12.62 0 2.23.58 4.41 1.68 6.33L3 29l7.04-1.84a12.6 12.6 0 0 0 5.97 1.52h.01c6.96 0 12.62-5.66 12.62-12.62S22.98 3.2 16.01 3.2zm0 22.98h-.01a10.3 10.3 0 0 1-5.25-1.44l-.38-.23-4.18 1.09 1.12-4.08-.25-.42a10.26 10.26 0 1 1 8.95 5.08z"/>
+      <path fill="currentColor" d="M19.11 17.21c-.29-.14-1.72-.85-1.99-.94-.27-.1-.46-.14-.66.14-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.14-1.2-.44-2.29-1.39-.85-.76-1.42-1.69-1.59-1.98-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.66-1.59-.9-2.18-.24-.57-.48-.49-.66-.5h-.56c-.19 0-.51.07-.78.36-.27.29-1.02 1-1.02 2.44 0 1.44 1.05 2.84 1.2 3.03.14.19 2.06 3.14 5 4.4.7.3 1.24.48 1.66.61.7.22 1.34.19 1.85.12.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.19-.56-.34z"/>
     </symbol>
     <symbol id="icon-instagram" viewBox="0 0 24 24">
       <rect x="4" y="4" width="16" height="16" rx="5"></rect>
@@ -44,7 +43,7 @@
   </div>
 
   <header class="site-header">
-    <a class="logo" href="#inicio">
+    <a class="logo logo-vintage" href="#inicio">
       <span>Caruso's</span>
       <small>Barbearia Tradicional</small>
     </a>
@@ -65,32 +64,31 @@
     <section id="inicio" class="hero section-panel">
       <div class="container hero-grid">
         <div class="hero-content reveal">
-          <p class="eyebrow">Americana - SP</p>
-          <h2>Corte clássico, barba bem feita e atendimento sem pressa.</h2>
+          <p class="eyebrow vintage-kicker">Americana - SP</p>
+          <h2 class="hero-vintage-title">Corte clássico, barba bem feita e atendimento sem pressa.</h2>
           <p class="hero-text">
             Na Caruso's Barbearia Tradicional, você agenda seu horário e recebe atenção de verdade. Um ambiente reservado, atendimento cuidadoso e serviço feito com técnica  .
           </p>
 
           <div class="hero-actions">
             <a class="button button-primary" href="https://wa.me/5519982435036?text=Ol%C3%A1%20Caruso's!%20Gostaria%20de%20agendar%20um%20corte." target="_blank" rel="noopener">
-              <svg class="button-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
               Agendar pelo WhatsApp
             </a>
             <a class="button button-secondary" href="#servicos">Conhecer serviços</a>
           </div>
 
           <div class="hero-stats">
-            <a class="info-card info-card-map" href="https://www.google.com/maps/search/?api=1&query=Caruso's%20Barbearia%20Tradicional%20R.%20Guanabara%2084%20Americana%20SP" target="_blank" rel="noopener" aria-label="Abrir endereço da Caruso's Barbearia no Google Maps">
+            <a class="info-card info-card-map" href="https://www.google.com/maps/search/?api=1&query=Caruso%27s%20Barbearia%20Tradicional%20R.%20Guanabara%2084%20Americana%20SP" target="_blank" rel="noopener" aria-label="Abrir endereço da Caruso's Barbearia no Google Maps">
               <svg class="premium-icon" aria-hidden="true"><use href="#icon-map"></use></svg>
               <strong>Endereço</strong>
               <span>R. Guanabara, 84 - Jardim Colina, Americana - SP</span>
             </a>
-            <a class="info-card info-card-whatsapp" href="https://wa.me/5519982435036?text=Ol%C3%A1%20Caruso's!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp da Caruso's Barbearia">
+            <a class="info-card info-card-whatsapp" href="https://wa.me/5519982435036?text=Ol%C3%A1%20Caruso%27s!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp da Caruso's Barbearia">
               <svg class="premium-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
               <strong>WhatsApp</strong>
               <span>+55 19 98243-5036</span>
             </a>
-            <a class="info-card info-card-clock" href="https://wa.me/5519982435036?text=Ol%C3%A1%20Caruso's!%20Gostaria%20de%20consultar%20os%20hor%C3%A1rios%20de%20atendimento." target="_blank" rel="noopener" aria-label="Consultar horários de atendimento pelo WhatsApp">
+            <a class="info-card info-card-clock" href="https://wa.me/5519982435036?text=Ol%C3%A1%20Caruso%27s!%20Gostaria%20de%20consultar%20os%20hor%C3%A1rios%20de%20atendimento." target="_blank" rel="noopener" aria-label="Consultar horários de atendimento pelo WhatsApp">
               <svg class="premium-icon" aria-hidden="true"><use href="#icon-clock"></use></svg>
               <strong>Atendimento</strong>
               <span>Segunda a sexta, mediante agendamento</span>
@@ -116,7 +114,7 @@
       </div>
     </section>
 
-    <section id="servicos" class="section section-light">
+    <section id="servicos" class="section section-light services-section">
       <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">Serviços</p>
@@ -124,33 +122,94 @@
           <p>Serviços objetivos, bem feitos e com agendamento simples pelo WhatsApp.</p>
         </div>
 
-        <div class="cards three-columns stagger">
-          <article class="card service-card reveal">
-            <span class="icon">✂</span>
-            <h3>Corte masculino</h3>
-            <p>Corte clássico ou moderno, pensado para seu rosto, estilo e rotina.</p>
-            <strong class="price">R$ 50</strong>
-          </article>
+        <div class="services-carousel reveal" data-autoplay="4500" aria-label="Carrossel de serviços da Caruso's Barbearia">
+          <button class="carousel-arrow carousel-arrow-left" type="button" aria-label="Serviço anterior">
+            <span aria-hidden="true">‹</span>
+          </button>
 
-          <article class="card service-card featured reveal">
-            <span class="tag">Mais procurado</span>
-            <span class="icon">◆</span>
-            <h3>Corte + barba</h3>
-            <p>Combo completo para cabelo alinhado, barba desenhada e acabamento impecável.</p>
-            <strong class="price">R$ 90</strong>
-          </article>
+          <div class="services-viewport">
+            <div class="services-track">
+              <article class="card service-card service-slide has-bg" style="--service-bg: url('assets/corte-masculino.png');">
+                <span class="icon">✂</span>
+                <h3>Corte masculino</h3>
+                <p>Corte clássico ou moderno, pensado para seu rosto, estilo e rotina.</p>
+                <strong class="price">R$ 50</strong>
+              </article>
 
-          <article class="card service-card reveal">
-            <span class="icon">◈</span>
-            <h3>Barba completa</h3>
-            <p>Limpeza, desenho, acabamento e cuidado para manter a barba bem apresentada.</p>
-            <strong class="price">R$ 50</strong>
-          </article>
+              <article class="card service-card service-slide featured has-bg" style="--service-bg: url('assets/corte-barba.png');">
+                <span class="tag">Mais procurado</span>
+                <span class="icon">◆</span>
+                <h3>Corte + barba</h3>
+                <p>Combo completo para cabelo alinhado, barba desenhada e acabamento impecável.</p>
+                <strong class="price">R$ 90</strong>
+              </article>
+
+              <article class="card service-card service-slide has-bg" style="--service-bg: url('assets/barba-completa.png');">
+                <span class="icon">◈</span>
+                <h3>Barba completa</h3>
+                <p>Limpeza, desenho, acabamento e cuidado para manter a barba bem apresentada.</p>
+                <strong class="price">R$ 50</strong>
+              </article>
+
+              <article class="card service-card service-slide has-bg" style="--service-bg: url('assets/sobrancelha.png');">
+                <span class="icon">⌁</span>
+                <h3>Design de Sobrancelha Masculino</h3>
+                <p>Alinhamento discreto e natural para valorizar o olhar sem perder a masculinidade.</p>
+                <strong class="price">R$ 45</strong>
+              </article>
+
+              <article class="card service-card service-slide has-bg" style="--service-bg: url('assets/depilacao-nasal.png');">
+                <span class="icon">◇</span>
+                <h3>Depilação Nasal</h3>
+                <p>Remoção rápida e cuidadosa dos pelos nasais para mais conforto e higiene.</p>
+                <strong class="price">R$ 45</strong>
+              </article>
+
+              <article class="card service-card service-slide has-bg" style="--service-bg: url('assets/depilacao-ouvido.png');">
+                <span class="icon">◌</span>
+                <h3>Depilação de ouvido</h3>
+                <p>Acabamento limpo e discreto para manter o visual alinhado nos detalhes.</p>
+                <strong class="price">R$ 45</strong>
+              </article>
+
+              <article class="card service-card service-slide has-bg" style="--service-bg: url('assets/limpeza-facial.png');">
+                <span class="icon">✦</span>
+                <h3>Limpeza Facial com Hidratação com Argila</h3>
+                <p>Cuidado facial para renovar a pele, hidratar e trazer sensação de frescor.</p>
+                <strong class="price">R$ 50</strong>
+              </article>
+
+              <article class="card service-card service-slide has-bg" style="--service-bg: url('assets/reflexologia.png');">
+                <span class="icon">◍</span>
+                <h3>Massagem nos pés (reflexologia)</h3>
+                <p>Sessão de 30 minutos para relaxamento, alívio de tensão e bem-estar.</p>
+                <strong class="price">R$ 55</strong>
+              </article>
+
+              <article class="card service-card service-slide has-bg" style="--service-bg: url('assets/massagem-relaxante.png');">
+                <span class="icon">☾</span>
+                <h3>Massagem relaxante</h3>
+                <p>Sessão de 1 hora para reduzir tensão, desacelerar e recuperar energia.</p>
+                <strong class="price">R$ 150</strong>
+              </article>
+            </div>
+          </div>
+
+          <button class="carousel-arrow carousel-arrow-right" type="button" aria-label="Próximo serviço">
+            <span aria-hidden="true">›</span>
+          </button>
+        </div>
+
+        <div class="carousel-dots" aria-label="Indicadores do carrossel de serviços"></div>
+
+        <div class="services-disclaimer reveal">
+          <strong>Formas de pagamento</strong>
+          <span>Preços válidos para pagamento em Pix ou dinheiro. Pagamentos no crédito podem ter acréscimo referente à taxa da maquininha.</span>
         </div>
       </div>
     </section>
 
-    <section id="experiencia" class="section section-dark cinematic">
+    <section id="experiencia" class="section section-dark cinematic parallax-photo-section" style="--section-photo: url('assets/corte-barba.png');">
       <div class="container split">
         <div class="reveal">
           <p class="eyebrow">Experiência</p>
@@ -212,7 +271,7 @@
       </div>
     </section>
 
-    <section id="avaliacoes" class="section section-light">
+    <section id="avaliacoes" class="section section-light reviews-photo-section">
       <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">Clientes</p>
@@ -239,19 +298,18 @@
       </div>
     </section>
 
-    <section class="section section-gold">
+    <section class="section section-gold gold-photo-section">
       <div class="container cta-section reveal">
         <p class="eyebrow">Agendamento</p>
         <h2>Pronto para marcar seu horário?</h2>
         <p>Clique no botão abaixo, fale direto pelo WhatsApp e consulte a disponibilidade.</p>
         <a class="button button-primary" href="https://wa.me/5519982435036?text=Ol%C3%A1%20Caruso's!%20Gostaria%20de%20consultar%20hor%C3%A1rios%20dispon%C3%ADveis." target="_blank" rel="noopener">
-          <svg class="button-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
           Consultar horários no WhatsApp
         </a>
       </div>
     </section>
 
-    <section id="contato" class="section section-dark">
+    <section id="contato" class="section section-dark contact-photo-section" style="--section-photo: url('assets/corte-masculino.png');">
       <div class="container contact-grid">
         <div class="reveal">
           <p class="eyebrow">Contato</p>

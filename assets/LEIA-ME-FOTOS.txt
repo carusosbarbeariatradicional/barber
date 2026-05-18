@@ -1,0 +1,13 @@
+Coloque aqui as fotos dos serviços com estes nomes:
+
+corte-masculino.jpg
+corte-barba.jpg
+barba-completa.jpg
+sobrancelha.jpg
+depilacao-nasal.jpg
+depilacao-ouvido.jpg
+limpeza-facial.jpg
+reflexologia.jpg
+massagem-relaxante.jpg
+
+Depois suba a pasta assets junto com index.html, style.css e script.js.
