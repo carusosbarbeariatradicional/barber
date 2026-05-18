@@ -7,24 +7,51 @@
   <title>Caruso's Barbearia Tradicional | Americana - SP</title>
   <meta name="description" content="Caruso's Barbearia Tradicional em Americana-SP. Corte clássico, barba, atendimento exclusivo e agendamento pelo WhatsApp." />
 
-  <meta property="og:title" content="Caruso's Barbearia Tradicional" />
-  <meta property="og:description" content="Corte clássico, barba e atendimento exclusivo em Americana-SP." />
-  <meta property="og:type" content="website" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-map" viewBox="0 0 24 24">
+      <path d="M12 21s7-5.2 7-12a7 7 0 1 0-14 0c0 6.8 7 12 7 12Z"></path>
+      <circle cx="12" cy="9" r="2.6"></circle>
+    </symbol>
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.78 11.78 0 0 0 12.12 0C5.7 0 .48 5.22.48 11.64c0 2.05.54 4.06 1.56 5.83L0 24l6.69-1.76a11.6 11.6 0 0 0 5.43 1.38h.01c6.42 0 11.64-5.22 11.64-11.64 0-3.11-1.21-6.04-3.25-8.5Z"></path>
+      <path d="M12.14 21.38h-.01a9.37 9.37 0 0 1-4.77-1.31l-.34-.2-3.97 1.04 1.06-3.86-.22-.36a9.39 9.39 0 1 1 8.25 4.69Z"></path>
+      <path d="M8.96 7.22c-.21-.48-.44-.49-.64-.5h-.54c-.18 0-.47.07-.72.34-.25.27-.94.92-.94 2.24 0 1.32.97 2.6 1.1 2.78.13.18 1.9 2.9 4.6 4.06.64.28 1.15.44 1.54.56.65.2 1.24.17 1.7.1.52-.08 1.6-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31-.27-.13-1.6-.79-1.84-.88-.25-.09-.43-.13-.61.13-.18.27-.7.88-.85 1.06-.16.18-.31.2-.58.07-.27-.13-1.12-.41-2.13-1.31-.79-.7-1.32-1.57-1.47-1.84-.16-.27-.02-.42.12-.55.12-.12.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.04-.34-.02-.47-.07-.13-.6-1.47-.83-2Z"></path>
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <rect x="4" y="4" width="16" height="16" rx="5"></rect>
+      <circle cx="12" cy="12" r="3.5"></circle>
+      <circle cx="17" cy="7" r="1"></circle>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8"></circle>
+      <path d="M12 7.5V12l3 2"></path>
+    </symbol>
+  </svg>
+
+  <div class="background-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
   <header class="site-header">
-    <a class="logo" href="#inicio">Caruso's</a>
+    <a class="logo" href="#inicio">
+      <span>Caruso's</span>
+      <small>Barbearia Tradicional</small>
+    </a>
 
     <nav class="nav" aria-label="Menu principal">
       <a href="#servicos">Serviços</a>
-      <a href="#diferenciais">Diferenciais</a>
+      <a href="#experiencia">Experiência</a>
       <a href="#avaliacoes">Avaliações</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -35,52 +62,55 @@
   </header>
 
   <main>
-    <section id="inicio" class="hero">
+    <section id="inicio" class="hero section-panel">
       <div class="container hero-grid">
-        <div class="hero-content">
-          <p class="eyebrow">Barbearia tradicional em Americana - SP</p>
-          <h1>Corte clássico, barba bem feita e atendimento sem pressa.</h1>
+        <div class="hero-content reveal">
+          <p class="eyebrow">Americana - SP</p>
+          <h2>Corte clássico, barba bem feita e atendimento sem pressa.</h2>
           <p class="hero-text">
-            Na Caruso's Barbearia Tradicional, você agenda seu horário e recebe atenção de verdade.
-            Um ambiente reservado, atendimento cuidadoso e serviço feito com técnica.
+            Na Caruso's Barbearia Tradicional, você agenda seu horário e recebe atenção de verdade. Um ambiente reservado, atendimento cuidadoso e serviço feito com técnica  .
           </p>
 
           <div class="hero-actions">
             <a class="button button-primary" href="https://wa.me/5519982435036?text=Ol%C3%A1%20Caruso's!%20Gostaria%20de%20agendar%20um%20corte." target="_blank" rel="noopener">
+              <svg class="button-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
               Agendar pelo WhatsApp
             </a>
-            <a class="button button-secondary" href="#servicos">Ver serviços</a>
+            <a class="button button-secondary" href="#servicos">Conhecer serviços</a>
           </div>
 
-          <div class="hero-badges">
-            <span>Atendimento com hora marcada</span>
-            <span>Corte, barba e acabamento</span>
-            <span>Ambiente exclusivo</span>
+          <div class="hero-stats">
+            <a class="info-card info-card-map" href="https://www.google.com/maps/search/?api=1&query=Caruso's%20Barbearia%20Tradicional%20R.%20Guanabara%2084%20Americana%20SP" target="_blank" rel="noopener" aria-label="Abrir endereço da Caruso's Barbearia no Google Maps">
+              <svg class="premium-icon" aria-hidden="true"><use href="#icon-map"></use></svg>
+              <strong>Endereço</strong>
+              <span>R. Guanabara, 84 - Jardim Colina, Americana - SP</span>
+            </a>
+            <a class="info-card info-card-whatsapp" href="https://wa.me/5519982435036?text=Ol%C3%A1%20Caruso's!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp da Caruso's Barbearia">
+              <svg class="premium-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+              <strong>WhatsApp</strong>
+              <span>+55 19 98243-5036</span>
+            </a>
+            <a class="info-card info-card-clock" href="https://wa.me/5519982435036?text=Ol%C3%A1%20Caruso's!%20Gostaria%20de%20consultar%20os%20hor%C3%A1rios%20de%20atendimento." target="_blank" rel="noopener" aria-label="Consultar horários de atendimento pelo WhatsApp">
+              <svg class="premium-icon" aria-hidden="true"><use href="#icon-clock"></use></svg>
+              <strong>Atendimento</strong>
+              <span>Segunda a sexta, mediante agendamento</span>
+            </a>
           </div>
         </div>
 
-        <div class="hero-card" aria-label="Informações rápidas">
-          <div class="hero-card-inner">
-            <p class="card-kicker">Caruso's Barbearia Tradicional</p>
-            <h2>Seu momento de cuidado masculino.</h2>
-            <p>
-              Corte clássico, barba desenhada, acabamento na navalha e atendimento personalizado.
-            </p>
+        <div class="hero-visual reveal reveal-right">
+          <div class="image-frame">
+            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1200&q=85" alt="Barbeiro realizando atendimento masculino" />
+          </div>
 
-            <div class="quick-info">
-              <div>
-                <strong>Endereço</strong>
-                <span>R. Guanabara, 84 - Jardim Colina, Americana - SP</span>
-              </div>
-              <div>
-                <strong>WhatsApp</strong>
-                <span>+55 19 98243-5036</span>
-              </div>
-              <div>
-                <strong>Atendimento</strong>
-                <span>Segunda a sexta, mediante agendamento</span>
-              </div>
-            </div>
+          <div class="floating-card floating-card-one">
+            <strong>Atendimento Exclusivo</strong>
+            <span>Atendimento com hora marcada</span>
+          </div>
+
+          <div class="floating-card floating-card-two">
+            <strong>Acabamento premium</strong>
+            <span>Corte clássico, barba desenhada e navalha</span>
           </div>
         </div>
       </div>
@@ -88,48 +118,50 @@
 
     <section id="servicos" class="section section-light">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading reveal">
           <p class="eyebrow">Serviços</p>
-          <h2>Escolha seu atendimento</h2>
-          <p>Preços simples, atendimento direto e agendamento pelo WhatsApp.</p>
+          <h2>Escolha o seu momento Caruso's</h2>
+          <p>Serviços objetivos, bem feitos e com agendamento simples pelo WhatsApp.</p>
         </div>
 
-        <div class="cards three-columns">
-          <article class="card service-card">
+        <div class="cards three-columns stagger">
+          <article class="card service-card reveal">
+            <span class="icon">✂</span>
             <h3>Corte masculino</h3>
-            <p>Corte clássico ou moderno, com atenção ao seu estilo, formato do rosto e rotina.</p>
+            <p>Corte clássico ou moderno, pensado para seu rosto, estilo e rotina.</p>
             <strong class="price">R$ 50</strong>
           </article>
 
-          <article class="card service-card featured">
+          <article class="card service-card featured reveal">
             <span class="tag">Mais procurado</span>
+            <span class="icon">◆</span>
             <h3>Corte + barba</h3>
-            <p>Combo completo para sair pronto: cabelo alinhado, barba desenhada e acabamento caprichado.</p>
+            <p>Combo completo para cabelo alinhado, barba desenhada e acabamento impecável.</p>
             <strong class="price">R$ 90</strong>
           </article>
 
-          <article class="card service-card">
+          <article class="card service-card reveal">
+            <span class="icon">◈</span>
             <h3>Barba completa</h3>
-            <p>Limpeza, desenho, acabamento e cuidado para manter a barba bonita e bem apresentada.</p>
+            <p>Limpeza, desenho, acabamento e cuidado para manter a barba bem apresentada.</p>
             <strong class="price">R$ 50</strong>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="diferenciais" class="section section-dark">
+    <section id="experiencia" class="section section-dark cinematic">
       <div class="container split">
-        <div>
-          <p class="eyebrow">Por que escolher a Caruso's?</p>
+        <div class="reveal">
+          <p class="eyebrow">Experiência</p>
           <h2>Aqui você não é só mais um cliente na fila.</h2>
           <p>
-            O atendimento é pensado para quem valoriza tempo, atenção e resultado. Antes de começar,
-            conversamos sobre o que você procura e entregamos um serviço com calma e técnica.
+            O atendimento é pensado para quem valoriza tempo, atenção e resultado. Antes de começar, conversamos sobre o que você procura e entregamos um serviço com calma e técnica.
           </p>
         </div>
 
-        <div class="feature-list">
-          <div class="feature">
+        <div class="timeline">
+          <div class="timeline-item reveal reveal-right">
             <span>01</span>
             <div>
               <h3>Atendimento com hora marcada</h3>
@@ -137,7 +169,7 @@
             </div>
           </div>
 
-          <div class="feature">
+          <div class="timeline-item reveal reveal-right">
             <span>02</span>
             <div>
               <h3>Atenção ao seu estilo</h3>
@@ -145,7 +177,7 @@
             </div>
           </div>
 
-          <div class="feature">
+          <div class="timeline-item reveal reveal-right">
             <span>03</span>
             <div>
               <h3>Ambiente reservado</h3>
@@ -156,26 +188,50 @@
       </div>
     </section>
 
-    <section id="avaliacoes" class="section section-light">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Clientes</p>
-          <h2>Quem passa pela Caruso's recomenda</h2>
-          <p>Veja alguns exemplos do que os clientes valorizam no atendimento.</p>
+    <section class="section section-showcase">
+      <div class="container showcase-grid">
+        <div class="showcase-card reveal">
+          <p class="eyebrow">Diferencial</p>
+          <h2>Atendimento exclusivo, sem fila e sem improviso.</h2>
         </div>
 
-        <div class="cards three-columns">
-          <article class="card testimonial">
+        <div class="showcase-mini reveal">
+          <strong>Hora marcada</strong>
+          <span>Mais controle do seu tempo.</span>
+        </div>
+
+        <div class="showcase-mini reveal">
+          <strong>Ambiente reservado</strong>
+          <span>Mais conforto durante o atendimento.</span>
+        </div>
+
+        <div class="showcase-mini reveal">
+          <strong>Resultado alinhado</strong>
+          <span>Mais confiança ao sair da cadeira.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="avaliacoes" class="section section-light">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Clientes</p>
+          <h2>Quem passa pela Caruso's recomenda</h2>
+          <p>Alguns exemplos do que os clientes mais valorizam no atendimento.</p>
+        </div>
+
+        <div class="cards three-columns stagger">
+          <article class="card testimonial reveal">
             <p>"Atendimento de primeira, muito atencioso e profissional. Sempre entende exatamente o que eu quero."</p>
             <strong>Ayslan Gonçalves</strong>
           </article>
 
-          <article class="card testimonial">
+          <article class="card testimonial reveal">
             <p>"Serviço completo e ambiente acolhedor, com conforto, boa música e café."</p>
             <strong>Éder Gonçalves Cardoso</strong>
           </article>
 
-          <article class="card testimonial">
+          <article class="card testimonial reveal">
             <p>"Top! Recomendo o atendimento e a qualidade do serviço."</p>
             <strong>Daniel Carvalho</strong>
           </article>
@@ -184,13 +240,12 @@
     </section>
 
     <section class="section section-gold">
-      <div class="container cta-section">
+      <div class="container cta-section reveal">
         <p class="eyebrow">Agendamento</p>
         <h2>Pronto para marcar seu horário?</h2>
-        <p>
-          Clique no botão abaixo, fale direto pelo WhatsApp e consulte a disponibilidade.
-        </p>
+        <p>Clique no botão abaixo, fale direto pelo WhatsApp e consulte a disponibilidade.</p>
         <a class="button button-primary" href="https://wa.me/5519982435036?text=Ol%C3%A1%20Caruso's!%20Gostaria%20de%20consultar%20hor%C3%A1rios%20dispon%C3%ADveis." target="_blank" rel="noopener">
+          <svg class="button-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
           Consultar horários no WhatsApp
         </a>
       </div>
@@ -198,20 +253,21 @@
 
     <section id="contato" class="section section-dark">
       <div class="container contact-grid">
-        <div>
+        <div class="reveal">
           <p class="eyebrow">Contato</p>
           <h2>Caruso's Barbearia Tradicional</h2>
           <p>
-            R. Guanabara, 84 - Jardim Colina, Americana - SP<br />
-            WhatsApp: <a href="https://wa.me/5519982435036" target="_blank" rel="noopener">+55 19 98243-5036</a><br />
-            Instagram: <a href="https://www.instagram.com/carusosbarbearia" target="_blank" rel="noopener">@carusosbarbearia</a>
+            <span class="contact-line"><svg class="inline-icon map" aria-hidden="true"><use href="#icon-map"></use></svg>R. Guanabara, 84 - Jardim Colina, Americana - SP</span>
+            <span class="contact-line"><svg class="inline-icon whatsapp" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>WhatsApp: <a href="https://wa.me/5519982435036" target="_blank" rel="noopener">+55 19 98243-5036</a></span>
+            <span class="contact-line"><svg class="inline-icon instagram" aria-hidden="true"><use href="#icon-instagram"></use></svg>Instagram: <a href="https://www.instagram.com/carusosbarbearia" target="_blank" rel="noopener">@carusosbarbearia</a></span>
           </p>
         </div>
 
-        <div class="map-card">
+        <div class="map-card reveal reveal-right">
           <h3>Como chegar</h3>
           <p>Abra o endereço no Google Maps e trace sua rota até a barbearia.</p>
           <a class="button button-secondary" href="https://www.google.com/maps/search/?api=1&query=Caruso's%20Barbearia%20Tradicional%20R.%20Guanabara%2084%20Americana%20SP" target="_blank" rel="noopener">
+            <svg class="button-icon" aria-hidden="true"><use href="#icon-map"></use></svg>
             Ver no Google Maps
           </a>
         </div>
@@ -220,6 +276,7 @@
   </main>
 
   <a class="whatsapp-float" href="https://wa.me/5519982435036?text=Ol%C3%A1%20Caruso's!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp">
+    <svg class="button-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
     WhatsApp
   </a>
 
@@ -228,5 +285,7 @@
       <p>© 2026 Caruso's Barbearia Tradicional. Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
