@@ -3406,3 +3406,173 @@ section#avaliacoes .testimonials-stack-viewport {
     padding: 20px 16px !important;
   }
 }
+
+
+
+/* =========================================================
+   REMOÇÃO TOTAL DAS SETAS DOS COMENTÁRIOS
+   Desktop e mobile: comentários sem setas, sem dots e sem carrossel.
+   ========================================================= */
+
+section#avaliacoes .testimonials-arrow,
+section#avaliacoes .testimonials-arrow-prev,
+section#avaliacoes .testimonials-arrow-next,
+section#avaliacoes .testimonials-dots,
+section#avaliacoes .testimonials-dot,
+section#avaliacoes [class*="testimonial"][class*="arrow"],
+section#avaliacoes [class*="comment"][class*="arrow"],
+section#avaliacoes [data-testimonials-prev],
+section#avaliacoes [data-testimonials-next],
+section#avaliacoes [data-testimonials-dots],
+section#avaliacoes button[aria-label*="Coment"],
+section#avaliacoes button[aria-label*="coment"],
+section#avaliacoes button[aria-label*="Próximo comentário"],
+section#avaliacoes button[aria-label*="Comentário anterior"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  z-index: -9999 !important;
+}
+
+/* Desktop: mantém os comentários em grade, sem qualquer carrossel */
+@media (min-width: 761px) {
+  section#avaliacoes .cards,
+  section#avaliacoes .cards.three-columns,
+  section#avaliacoes .three-columns,
+  section#avaliacoes .stagger,
+  section#avaliacoes .testimonials-stack {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 22px !important;
+    transform: none !important;
+    transition: none !important;
+    overflow: visible !important;
+  }
+
+  section#avaliacoes .testimonial,
+  section#avaliacoes .card {
+    width: auto !important;
+    max-width: none !important;
+    flex: none !important;
+  }
+}
+
+/* Mobile: comentários empilhados, um abaixo do outro */
+@media (max-width: 760px) {
+  section#avaliacoes {
+    padding-top: 70px !important;
+    padding-bottom: 76px !important;
+    overflow: hidden !important;
+    background:
+      linear-gradient(rgba(16, 16, 16, 0.82), rgba(16, 16, 16, 0.92)),
+      url("https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1200&q=80") center/cover fixed !important;
+    color: var(--white) !important;
+  }
+
+  section#avaliacoes .container {
+    width: min(100% - 26px, var(--max-width)) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  section#avaliacoes .section-heading {
+    max-width: 350px !important;
+    margin: 0 auto 26px !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  section#avaliacoes .section-heading h2 {
+    max-width: 330px !important;
+    margin: 0 auto !important;
+    color: #fff7df !important;
+    font-size: clamp(1.8rem, 8.5vw, 2.35rem) !important;
+    line-height: 1.06 !important;
+    letter-spacing: -0.035em !important;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  section#avaliacoes .section-heading p:not(.eyebrow) {
+    max-width: 310px !important;
+    margin: 14px auto 0 !important;
+    color: rgba(255, 255, 255, 0.74) !important;
+    font-size: 0.94rem !important;
+    line-height: 1.5 !important;
+  }
+
+  section#avaliacoes .cards,
+  section#avaliacoes .cards.three-columns,
+  section#avaliacoes .three-columns,
+  section#avaliacoes .stagger,
+  section#avaliacoes .testimonials-stack {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 390px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  section#avaliacoes .testimonial,
+  section#avaliacoes .card,
+  section#avaliacoes article {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: none !important;
+    min-height: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 22px 18px !important;
+    border-radius: 10px !important;
+    text-align: left !important;
+    background:
+      radial-gradient(circle at 86% 12%, rgba(212, 175, 55, 0.16), transparent 24%),
+      linear-gradient(135deg, rgba(32, 32, 32, 0.95), rgba(16, 16, 16, 0.92)) !important;
+    color: var(--white) !important;
+    border: 1px solid rgba(212, 175, 55, 0.42) !important;
+    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.28) !important;
+    transform: none !important;
+    overflow: hidden !important;
+  }
+
+  section#avaliacoes .testimonial p,
+  section#avaliacoes .card p {
+    width: 100% !important;
+    margin: 0 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 0.96rem !important;
+    line-height: 1.55 !important;
+    font-weight: 500 !important;
+    text-align: left !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  section#avaliacoes .testimonial strong,
+  section#avaliacoes .card strong {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-top: 20px !important;
+    color: var(--gold) !important;
+    font-size: 0.72rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    white-space: normal !important;
+  }
+}
