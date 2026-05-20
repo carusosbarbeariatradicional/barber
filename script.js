@@ -45,16 +45,20 @@ function initServicesCarousel() {
   const prevButton =
     carousel.querySelector("[data-services-prev]") ||
     carousel.querySelector(".services-arrow-prev") ||
+    carousel.querySelector(".carousel-arrow-left") ||
     carousel.querySelector(".carousel-btn.prev");
 
   const nextButton =
     carousel.querySelector("[data-services-next]") ||
     carousel.querySelector(".services-arrow-next") ||
+    carousel.querySelector(".carousel-arrow-right") ||
     carousel.querySelector(".carousel-btn.next");
 
   const dotsContainer =
     carousel.querySelector("[data-services-dots]") ||
-    carousel.querySelector(".services-dots");
+    carousel.querySelector(".services-dots") ||
+    carousel.parentElement?.querySelector(".carousel-dots") ||
+    document.querySelector(".carousel-dots");
 
   const cards = Array.from(track.querySelectorAll(".service-card"));
   if (!cards.length) return;
@@ -88,7 +92,7 @@ function initServicesCarousel() {
     for (let i = 0; i < count; i += 1) {
       const dot = document.createElement("button");
       dot.type = "button";
-      dot.className = "services-dot";
+      dot.className = "services-dot carousel-dot";
       dot.setAttribute("aria-label", `Ir para serviços ${i + 1}`);
       dot.addEventListener("click", () => {
         currentIndex = i;
@@ -154,4 +158,3 @@ if (mobileMenuToggle && nav) {
     });
   });
 }
-
