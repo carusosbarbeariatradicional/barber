@@ -1,13 +1,19 @@
-Coloque aqui as fotos dos serviços com estes nomes:
+PASTA DE FOTOS DOS SERVIÇOS
 
-corte-masculino.jpg
-corte-barba.jpg
-barba-completa.jpg
-sobrancelha.jpg
-depilacao-nasal.jpg
-depilacao-ouvido.jpg
-limpeza-facial.jpg
-reflexologia.jpg
-massagem-relaxante.jpg
+Coloque as imagens nesta pasta exatamente com estes nomes:
 
-Depois suba a pasta assets junto com index.html, style.css e script.js.
+- corte-masculino.png
+- corte-barba.png
+- barba-completa.png
+- sobrancelha.png
+- depilacao-nasal.png
+- depilacao-ouvido.png
+- limpeza-facial.png
+- reflexologia.png
+- massagem-relaxante.png
+
+Importante:
+1. Os nomes precisam ser exatamente iguais.
+2. Use letras minúsculas, sem acentos e sem espaços.
+3. As imagens aparecem quando o mouse passa sobre o card do serviço.
+4. No celular, como não existe hover com mouse, o visual principal permanece em card.

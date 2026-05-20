@@ -1,0 +1,3 @@
+Para trocar a foto da seção do barbeiro, coloque uma imagem chamada barbeiro.png nesta pasta assets.
+Caminho esperado: assets/barbeiro.png
+Sugestão: foto quadrada, boa iluminação, enquadramento do rosto/torso.

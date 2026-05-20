@@ -48,6 +48,12 @@
       <small>Barbearia Tradicional</small>
     </a>
 
+    <button class="mobile-menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <nav class="nav" aria-label="Menu principal">
       <a href="#servicos">Serviços</a>
       <a href="#experiencia">Experiência</a>
@@ -115,34 +121,6 @@
       </div>
     </section>
 
-
-
-    <section id="barbeiro" class="section section-barbeiro">
-      <div class="container barbeiro-grid">
-        <div class="barbeiro-photo-wrap reveal">
-          <div class="barbeiro-photo-frame">
-            <img src="assets/barbeiro.png" alt="Barbeiro responsável pela Caruso's Barbearia Tradicional" />
-          </div>
-        </div>
-
-        <div class="barbeiro-content reveal reveal-right">
-          <p class="eyebrow vintage-kicker">O barbeiro</p>
-          <h2>Tradição, técnica e atenção em cada atendimento.</h2>
-          <p>
-            Caruso é Mestre Barbeiro com mais de uma década de experiência, especialista em cortes vintage, visagismo e cuidado capilar. Reconhecido pela técnica refinada e atendimento humanizado, já formou mais de 120 alunos e acredita que cada cliente merece um serviço personalizado, pensado para fortalecer estilo, autoestima e confiança.
-          </p>
-          <p>
-            Ao lado da designer Raquel Netto, une experiência, cuidado e tradição em cada atendimento.
-          </p>
-          <a class="button button-secondary" href="https://wa.me/5519982435036?text=Ol%C3%A1%20Caruso's!%20Gostaria%20de%20conhecer%20melhor%20os%20servi%C3%A7os%20da%20barbearia." target="_blank" rel="noopener">
-            <svg class="button-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-            Falar com a Caruso's
-          </a>
-        </div>
-      </div>
-    </section>
-
-
     <section id="servicos" class="section section-light services-section">
       <div class="container">
         <div class="section-heading reveal">
@@ -151,8 +129,8 @@
           <p>Serviços objetivos, bem feitos e com agendamento simples pelo WhatsApp.</p>
         </div>
 
-        <div class="services-carousel reveal" data-services-carousel aria-label="Carrossel de serviços da Caruso's Barbearia">
-          <button class="carousel-arrow carousel-arrow-left" type="button" data-services-prev aria-label="Serviço anterior">
+        <div class="services-carousel reveal" data-autoplay="4500" aria-label="Carrossel de serviços da Caruso's Barbearia">
+          <button class="carousel-arrow carousel-arrow-left" type="button" aria-label="Serviço anterior">
             <span aria-hidden="true">‹</span>
           </button>
 
@@ -224,12 +202,12 @@
             </div>
           </div>
 
-          <button class="carousel-arrow carousel-arrow-right" type="button" data-services-next aria-label="Próximo serviço">
+          <button class="carousel-arrow carousel-arrow-right" type="button" aria-label="Próximo serviço">
             <span aria-hidden="true">›</span>
           </button>
         </div>
 
-        <div class="carousel-dots" data-services-dots aria-label="Indicadores do carrossel de serviços"></div>
+        <div class="carousel-dots" aria-label="Indicadores do carrossel de serviços"></div>
 
         <div class="services-disclaimer reveal">
           <strong>Formas de pagamento</strong>
@@ -275,6 +253,36 @@
         </div>
       </div>
     </section>
+
+
+    <section id="barbeiro" class="section section-barbeiro">
+      <div class="container barbeiro-grid">
+        <div class="barbeiro-photo-wrap reveal">
+          <div class="barbeiro-photo-frame">
+            <img src="assets/barbeiro.png" alt="Barbeiro responsável pela Caruso's Barbearia Tradicional" />
+          </div>
+        </div>
+
+        <div class="barbeiro-content reveal reveal-right">
+          <p class="eyebrow vintage-kicker">O barbeiro</p>
+          <h2>Tradição, técnica e atenção em cada atendimento.</h2>
+          <p>
+            Na Caruso's Barbearia Tradicional, cada cliente é atendido com calma, conversa e cuidado.
+            A proposta é entender seu estilo, respeitar seu tempo e entregar um serviço com acabamento
+            clássico, presença e personalidade.
+          </p>
+          <p>
+            Mais do que cortar cabelo ou fazer barba, o atendimento é pensado para você sair se sentindo
+            bem, confiante e pronto para qualquer compromisso.
+          </p>
+          <a class="button button-secondary" href="https://wa.me/5519982435036?text=Ol%C3%A1%20Caruso's!%20Gostaria%20de%20conhecer%20melhor%20os%20servi%C3%A7os%20da%20barbearia." target="_blank" rel="noopener">
+            <svg class="button-icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
+            Falar com a Caruso's
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-showcase">
       <div class="container showcase-grid">
         <div class="showcase-card reveal">

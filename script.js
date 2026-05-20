@@ -27,104 +27,130 @@ function updateHeader() {
 updateHeader();
 window.addEventListener("scroll", updateHeader);
 
-// Carrosséis 100% manuais.
-// Corrige as setas da seção Serviços e também mantém compatibilidade
-// com outros carrosséis que usem classes/data-attributes parecidos.
-function initManualCarousels() {
-  const carousels = document.querySelectorAll("[data-services-carousel], .services-carousel");
+// Carrossel de serviços 100% manual.
+// Não existe autoplay neste arquivo.
+function initServicesCarousel() {
+  const carousel =
+    document.querySelector("[data-services-carousel]") ||
+    document.querySelector(".services-carousel");
 
-  carousels.forEach((carousel) => {
-    const track = carousel.querySelector("[data-services-track], .services-track");
-    if (!track || carousel.dataset.carouselReady === "true") return;
+  if (!carousel) return;
 
-    const prevButton = carousel.querySelector(
-      "[data-services-prev], .carousel-arrow-left, .services-arrow-prev, .carousel-btn.prev"
-    );
+  const track =
+    carousel.querySelector("[data-services-track]") ||
+    carousel.querySelector(".services-track");
 
-    const nextButton = carousel.querySelector(
-      "[data-services-next], .carousel-arrow-right, .services-arrow-next, .carousel-btn.next"
-    );
+  if (!track) return;
 
-    const dotsContainer =
-      carousel.querySelector("[data-services-dots], .carousel-dots, .services-dots") || null;
+  const prevButton =
+    carousel.querySelector("[data-services-prev]") ||
+    carousel.querySelector(".services-arrow-prev") ||
+    carousel.querySelector(".carousel-btn.prev");
 
-    const slides = Array.from(track.children).filter((item) => item.matches("article, .service-card, .testimonial"));
-    if (!slides.length) return;
+  const nextButton =
+    carousel.querySelector("[data-services-next]") ||
+    carousel.querySelector(".services-arrow-next") ||
+    carousel.querySelector(".carousel-btn.next");
 
-    carousel.dataset.carouselReady = "true";
-    let currentIndex = 0;
+  const dotsContainer =
+    carousel.querySelector("[data-services-dots]") ||
+    carousel.querySelector(".services-dots");
 
-    function visibleSlides() {
-      if (window.innerWidth <= 720) return 1;
-      if (window.innerWidth <= 1100) return 2;
-      return 3;
+  const cards = Array.from(track.querySelectorAll(".service-card"));
+  if (!cards.length) return;
+
+  let currentIndex = 0;
+
+  function visibleCards() {
+    if (window.innerWidth <= 720) return 1;
+    if (window.innerWidth <= 1100) return 2;
+    return 3;
+  }
+
+  function maxIndex() {
+    return Math.max(0, cards.length - visibleCards());
+  }
+
+  function cardStep() {
+    const firstCard = cards[0];
+    const rect = firstCard.getBoundingClientRect();
+    const styles = window.getComputedStyle(track);
+    const gap = parseFloat(styles.gap || styles.columnGap || "0");
+    return rect.width + gap;
+  }
+
+  function buildDots() {
+    if (!dotsContainer) return;
+
+    dotsContainer.innerHTML = "";
+    const count = maxIndex() + 1;
+
+    for (let i = 0; i < count; i += 1) {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "services-dot";
+      dot.setAttribute("aria-label", `Ir para serviços ${i + 1}`);
+      dot.addEventListener("click", () => {
+        currentIndex = i;
+        update();
+      });
+      dotsContainer.appendChild(dot);
     }
+  }
 
-    function maxIndex() {
-      return Math.max(0, slides.length - visibleSlides());
+  function update() {
+    currentIndex = Math.max(0, Math.min(currentIndex, maxIndex()));
+    track.style.transform = `translate3d(-${currentIndex * cardStep()}px, 0, 0)`;
+
+    if (prevButton) prevButton.disabled = currentIndex === 0;
+    if (nextButton) nextButton.disabled = currentIndex === maxIndex();
+
+    if (dotsContainer) {
+      Array.from(dotsContainer.children).forEach((dot, i) => {
+        dot.classList.toggle("is-active", i === currentIndex);
+      });
     }
+  }
 
-    function slideStep() {
-      const firstSlide = slides[0];
-      const rect = firstSlide.getBoundingClientRect();
-      const styles = window.getComputedStyle(track);
-      const gap = parseFloat(styles.columnGap || styles.gap || "0") || 0;
-      return rect.width + gap;
-    }
-
-    function buildDots() {
-      if (!dotsContainer) return;
-
-      dotsContainer.innerHTML = "";
-      const count = maxIndex() + 1;
-
-      for (let i = 0; i < count; i += 1) {
-        const dot = document.createElement("button");
-        dot.type = "button";
-        dot.className = dotsContainer.classList.contains("carousel-dots") ? "carousel-dot" : "services-dot";
-        dot.setAttribute("aria-label", `Ir para o item ${i + 1}`);
-        dot.addEventListener("click", () => {
-          currentIndex = i;
-          updateCarousel();
-        });
-        dotsContainer.appendChild(dot);
-      }
-    }
-
-    function updateCarousel() {
-      currentIndex = Math.max(0, Math.min(currentIndex, maxIndex()));
-      track.style.transform = `translate3d(-${currentIndex * slideStep()}px, 0, 0)`;
-
-      if (prevButton) prevButton.disabled = currentIndex === 0;
-      if (nextButton) nextButton.disabled = currentIndex === maxIndex();
-
-      if (dotsContainer) {
-        Array.from(dotsContainer.children).forEach((dot, index) => {
-          dot.classList.toggle("is-active", index === currentIndex);
-        });
-      }
-    }
-
-    prevButton?.addEventListener("click", (event) => {
-      event.preventDefault();
-      currentIndex -= 1;
-      updateCarousel();
-    });
-
-    nextButton?.addEventListener("click", (event) => {
-      event.preventDefault();
-      currentIndex += 1;
-      updateCarousel();
-    });
-
-    window.addEventListener("resize", () => {
-      buildDots();
-      updateCarousel();
-    });
-
-    buildDots();
-    updateCarousel();
+  prevButton?.addEventListener("click", (event) => {
+    event.preventDefault();
+    currentIndex -= 1;
+    update();
   });
+
+  nextButton?.addEventListener("click", (event) => {
+    event.preventDefault();
+    currentIndex += 1;
+    update();
+  });
+
+  window.addEventListener("resize", () => {
+    buildDots();
+    update();
+  });
+
+  buildDots();
+  update();
 }
 
-initManualCarousels();
+initServicesCarousel();
+
+// Menu mobile premium
+const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+const nav = document.querySelector(".nav");
+
+if (mobileMenuToggle && nav) {
+  mobileMenuToggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("is-open");
+    mobileMenuToggle.classList.toggle("is-open", isOpen);
+    mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("is-open");
+      mobileMenuToggle.classList.remove("is-open");
+      mobileMenuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
