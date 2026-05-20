@@ -2667,3 +2667,191 @@ h3 {
     font-size: 0.94rem;
   }
 }
+
+
+
+/* =========================================================
+   CORREÇÃO DEFINITIVA MOBILE - AVALIAÇÕES / COMENTÁRIOS
+   Força os depoimentos a ficarem em 1 coluna no celular.
+   Não altera desktop.
+   ========================================================= */
+
+@media (max-width: 760px) {
+  section#avaliacoes {
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+    overflow: hidden !important;
+  }
+
+  section#avaliacoes .container {
+    width: min(100% - 28px, var(--max-width)) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  section#avaliacoes .section-heading {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 28px !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  section#avaliacoes .section-heading .eyebrow {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.16em !important;
+    margin-bottom: 10px !important;
+  }
+
+  section#avaliacoes .section-heading h2 {
+    max-width: 340px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: clamp(1.9rem, 9vw, 2.45rem) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.035em !important;
+  }
+
+  section#avaliacoes .section-heading p:not(.eyebrow) {
+    max-width: 310px !important;
+    margin: 14px auto 0 !important;
+    font-size: 0.94rem !important;
+    line-height: 1.5 !important;
+  }
+
+  section#avaliacoes .cards,
+  section#avaliacoes .cards.three-columns,
+  section#avaliacoes .three-columns,
+  section#avaliacoes .stagger {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
+    grid-auto-flow: row !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 18px !important;
+    width: 100% !important;
+    max-width: 390px !important;
+    margin: 0 auto !important;
+    overflow: visible !important;
+    transform: none !important;
+  }
+
+  section#avaliacoes .card,
+  section#avaliacoes .testimonial,
+  section#avaliacoes article {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 0 0 auto !important;
+    display: block !important;
+    min-height: auto !important;
+    height: auto !important;
+    padding: 24px 22px !important;
+    border-radius: 24px !important;
+    text-align: left !important;
+    background:
+      radial-gradient(circle at 16% 0%, rgba(212, 175, 55, 0.16), transparent 34%),
+      rgba(255, 255, 255, 0.96) !important;
+    color: var(--text) !important;
+    border: 1px solid rgba(20, 20, 20, 0.08) !important;
+    box-shadow: 0 18px 42px rgba(20, 20, 20, 0.14) !important;
+    transform: none !important;
+    overflow: hidden !important;
+  }
+
+  section#avaliacoes .testimonial::before,
+  section#avaliacoes .card::before {
+    content: "“" !important;
+    position: absolute !important;
+    top: 8px !important;
+    right: 18px !important;
+    inset: auto 18px auto auto !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    background: transparent !important;
+    opacity: 1 !important;
+    font-family: "Playfair Display", Georgia, serif !important;
+    font-size: 4rem !important;
+    line-height: 1 !important;
+    color: rgba(212, 175, 55, 0.22) !important;
+    pointer-events: none !important;
+    transform: none !important;
+  }
+
+  section#avaliacoes .testimonial::after,
+  section#avaliacoes .card::after {
+    display: none !important;
+  }
+
+  section#avaliacoes .testimonial > *,
+  section#avaliacoes .card > * {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  section#avaliacoes .testimonial p,
+  section#avaliacoes .card p {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    color: rgba(34, 34, 34, 0.86) !important;
+    font-size: 0.98rem !important;
+    line-height: 1.65 !important;
+    font-weight: 600 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: anywhere !important;
+    text-align: left !important;
+  }
+
+  section#avaliacoes .testimonial strong,
+  section#avaliacoes .card strong {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-top: 18px !important;
+    color: var(--wine) !important;
+    font-size: 0.95rem !important;
+    font-weight: 900 !important;
+    white-space: normal !important;
+    text-align: left !important;
+  }
+
+  section#avaliacoes .testimonial strong::before,
+  section#avaliacoes .card strong::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 26px !important;
+    height: 2px !important;
+    border-radius: 999px !important;
+    background: var(--gold) !important;
+    flex: 0 0 auto !important;
+  }
+}
+
+@media (max-width: 390px) {
+  section#avaliacoes .section-heading h2 {
+    max-width: 300px !important;
+    font-size: clamp(1.72rem, 8.4vw, 2.15rem) !important;
+  }
+
+  section#avaliacoes .cards,
+  section#avaliacoes .cards.three-columns,
+  section#avaliacoes .three-columns,
+  section#avaliacoes .stagger {
+    max-width: 330px !important;
+  }
+
+  section#avaliacoes .testimonial,
+  section#avaliacoes .card {
+    padding: 22px 20px !important;
+  }
+
+  section#avaliacoes .testimonial p,
+  section#avaliacoes .card p {
+    font-size: 0.94rem !important;
+    line-height: 1.6 !important;
+  }
+}
