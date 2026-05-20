@@ -2528,3 +2528,142 @@ h3 {
       linear-gradient(180deg, rgba(0,0,0,0.26), rgba(0,0,0,0.82));
   }
 }
+
+/* ===== REFINO MOBILE - SEÇÃO DE COMENTÁRIOS / AVALIAÇÕES ===== */
+/* Afeta somente tablet/celular. Desktop permanece igual. */
+
+@media (max-width: 960px) {
+  #avaliacoes .section-heading {
+    max-width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 28px;
+  }
+
+  #avaliacoes .section-heading h2 {
+    font-size: clamp(2rem, 8.6vw, 2.9rem);
+    line-height: 1.08;
+  }
+
+  #avaliacoes .section-heading p:not(.eyebrow) {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  #avaliacoes .cards.three-columns,
+  #avaliacoes .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  #avaliacoes .testimonial {
+    min-height: auto;
+    padding: 24px;
+    border-radius: 24px;
+    background:
+      radial-gradient(circle at 18% 0%, rgba(212, 175, 55, 0.18), transparent 30%),
+      rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(20, 20, 20, 0.06);
+    box-shadow: 0 18px 48px rgba(20, 20, 20, 0.12);
+    text-align: left;
+  }
+
+  #avaliacoes .testimonial::before {
+    content: "“";
+    position: absolute;
+    top: 8px;
+    right: 22px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 4.4rem;
+    line-height: 1;
+    color: rgba(212, 175, 55, 0.22);
+    pointer-events: none;
+  }
+
+  #avaliacoes .testimonial p {
+    position: relative;
+    margin: 0;
+    color: rgba(34, 34, 34, 0.84);
+    font-size: 1rem;
+    line-height: 1.65;
+    font-weight: 600;
+  }
+
+  #avaliacoes .testimonial strong {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    color: var(--wine);
+    font-size: 0.98rem;
+    font-weight: 900;
+  }
+
+  #avaliacoes .testimonial strong::before {
+    content: "";
+    width: 26px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--gold);
+  }
+}
+
+@media (max-width: 560px) {
+  #avaliacoes {
+    padding-top: 54px;
+    padding-bottom: 58px;
+  }
+
+  #avaliacoes .container {
+    width: min(100% - 22px, var(--max-width));
+  }
+
+  #avaliacoes .section-heading {
+    margin-bottom: 24px;
+  }
+
+  #avaliacoes .section-heading .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+  }
+
+  #avaliacoes .section-heading h2 {
+    font-size: clamp(1.9rem, 9.5vw, 2.55rem);
+  }
+
+  #avaliacoes .section-heading p:not(.eyebrow) {
+    font-size: 0.94rem;
+  }
+
+  #avaliacoes .cards.three-columns,
+  #avaliacoes .cards {
+    gap: 14px;
+  }
+
+  #avaliacoes .testimonial {
+    padding: 22px 20px;
+    border-radius: 22px;
+  }
+
+  #avaliacoes .testimonial::before {
+    top: 6px;
+    right: 18px;
+    font-size: 3.8rem;
+  }
+
+  #avaliacoes .testimonial p {
+    font-size: 0.95rem;
+    line-height: 1.62;
+  }
+
+  #avaliacoes .testimonial strong {
+    margin-top: 16px;
+    font-size: 0.94rem;
+  }
+}
