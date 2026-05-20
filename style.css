@@ -2855,3 +2855,148 @@ h3 {
     line-height: 1.6 !important;
   }
 }
+
+
+
+/* =========================================================
+   COMENTÁRIOS MOBILE COM SETAS FUNCIONAIS
+   Desktop permanece em grade. Mobile exibe 1 comentário por vez.
+   ========================================================= */
+
+.testimonials-carousel {
+  position: relative;
+}
+
+.testimonials-viewport {
+  width: 100%;
+}
+
+.testimonials-arrow,
+.testimonials-dots {
+  display: none;
+}
+
+@media (min-width: 761px) {
+  section#avaliacoes .testimonials-track {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 22px !important;
+    transform: none !important;
+  }
+
+  section#avaliacoes .testimonials-viewport {
+    overflow: visible !important;
+  }
+
+  section#avaliacoes .testimonial {
+    width: auto !important;
+  }
+}
+
+@media (max-width: 760px) {
+  section#avaliacoes .testimonials-carousel {
+    max-width: 390px !important;
+    margin: 0 auto !important;
+    padding: 0 46px !important;
+  }
+
+  section#avaliacoes .testimonials-viewport {
+    overflow: hidden !important;
+    width: 100% !important;
+    border-radius: 26px !important;
+  }
+
+  section#avaliacoes .testimonials-track,
+  section#avaliacoes .testimonials-track.cards,
+  section#avaliacoes .testimonials-track.three-columns,
+  section#avaliacoes .testimonials-track.stagger {
+    display: flex !important;
+    flex-direction: row !important;
+    grid-template-columns: none !important;
+    gap: 16px !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    transition: transform 0.42s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    will-change: transform !important;
+  }
+
+  section#avaliacoes .testimonials-track .testimonial,
+  section#avaliacoes .testimonials-track .card,
+  section#avaliacoes .testimonials-track article {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+  .testimonials-arrow {
+    display: grid !important;
+    place-items: center !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 6 !important;
+    width: 38px !important;
+    height: 38px !important;
+    border: 1px solid rgba(212, 175, 55, 0.32) !important;
+    border-radius: 12px !important;
+    background: rgba(16, 16, 16, 0.86) !important;
+    color: var(--gold) !important;
+    font-size: 1.65rem !important;
+    line-height: 1 !important;
+    cursor: pointer !important;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.22) !important;
+  }
+
+  .testimonials-arrow-prev {
+    left: 0 !important;
+  }
+
+  .testimonials-arrow-next {
+    right: 0 !important;
+  }
+
+  .testimonials-arrow:disabled {
+    opacity: 0.34 !important;
+    cursor: not-allowed !important;
+  }
+
+  .testimonials-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .testimonials-dot {
+    width: 10px;
+    height: 10px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(158, 31, 53, 0.24);
+    cursor: pointer;
+    transition: width 0.25s ease, background 0.25s ease;
+  }
+
+  .testimonials-dot.is-active {
+    width: 28px;
+    background: var(--gold);
+  }
+}
+
+@media (max-width: 390px) {
+  section#avaliacoes .testimonials-carousel {
+    max-width: 340px !important;
+    padding: 0 40px !important;
+  }
+
+  .testimonials-arrow {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 1.45rem !important;
+  }
+}
